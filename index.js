@@ -109,13 +109,30 @@
 
 //4
 // const Prakt4 = function(num){
-// let a = Math.abs(num);
+// switch(num){
+// case (num < 0):{
+//     return (num * (-1));
+//     break;
+// }
+// case (num > 0):{
+//     return (num);
+//     break;
+// }
+// case (num === 0):{
+//     return (num);
+//     break;
+// }
+// case (num === ''):{
+//     return 'NaN';
+//     break;
+// }   
+// }
 // }
 // const num = prompt('Введите числи, что бы узнать его абсолютное значение');
-// const wuwod = Prakt4();
+// const wuwod = Prakt4(num);
 // alert(wuwod);
 // Prakt4(num);
-//в ручную, что бы любое число приводилось к положительному
+// в ручную, что бы любое число приводилось к положительному
 
 
 
@@ -175,37 +192,41 @@
 
 
 //3
-// const Sezon = function(num){
-// switch(num){
-//     case '1':
-//         case '2':
-//             case '12':{
-//                 return 'Сейчас зима'
-//                 break;
-//             }
-//             case '3':
-//                 case '4':
-//                     case '5':{
-//                         return 'Сейчас весна'
-//                         break;
-//                     }
-//                     case '6':
-//                         case '7':
-//                             case '8':{
-//                                 return 'Сечайс лето'
-//                                 break;
-//                             }
-//                             case '9':
-//                                 case '10':
-//                                     case '11':{
-//                                         return 'Сечайс осень'
-//                                         break;
-//                                     }
+const Sezon = function(num){
+    if(num >=1 && num <= 12){
+switch(num){
+    case '1':
+        case '2':
+            case '12':{
+                return 'Сейчас зима'
+                break;
+            }
+            case '3':
+                case '4':
+                    case '5':{
+                        return 'Сейчас весна'
+                        break;
+                    }
+                    case '6':
+                        case '7':
+                            case '8':{
+                                return 'Сечайс лето'
+                                break;
+                            }
+                            case '9':
+                                case '10':
+                                    case '11':{
+                                        return 'Сечайс осень'
+                                        break;
+                                    }
                                     
 
-// }
-// }
-// const num = prompt('Введите номер месяца');
-// const wuwod = Sezon(num);
-// alert(wuwod);
-// Sezon(num);
+}
+    }else{
+        return 'Такого месяца не существует';
+    }
+}
+const num = prompt('Введите номер месяца');
+const wuwod = Sezon(num);
+alert(wuwod);
+Sezon(num);
